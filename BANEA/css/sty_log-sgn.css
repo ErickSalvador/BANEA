@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #E5E5E5;
+    color: #0A0C09;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1.6em;
+}
+
+.bmn__inp {
+    background: url(../src/fondo.jpg) repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 10%;
+}
+
+.frm__sgn,
+.frm__log,
+.frm__ord {
+    background: #CDE745;
+    color: #417D19;
+    display: block;
+    border-radius: 15px;
+    display: grid;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.frm__log {
+    width: 50%;
+    margin: 0 25%;
+    height: fit-content;
+    grid-template-columns: 1fr;
+}
+
+.frm__sgn {
+    width: 80%;
+    margin: 0 10%;
+    height: fit-content;
+    grid-template-columns: 1fr 1fr;
+}
+
+.frm__ord {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.frm__ttl {
+    width: 100%;
+    margin: 0;
+    padding: 0 20%;
+}
+
+.frm__space {
+    width: 100%;
+}
+
+.frm__lgo {
+    width: 75px;
+    height: 75px;
+    margin-left: 35%;
+}
+
+.frm__lbl {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.frm__grp-inp {
+    position: relative;
+}
+
+.frm__inp {
+    width: 100%;
+    background: transparent;
+    border: 3px solid transparent;
+    border-bottom: 1px solid #417D19;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    color: #1F381B;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.frm__grp-cnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.frm__log a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #0A0C09;
+}
+
+.frm__log a:hover {
+    color: #74A82A;
+}
+
+.frm__inp:focus {
+    border: 2px solid #74A82A;
+    outline: none;
+    box-shadow: 2px 0 15px rgba(31, 56, 27, 0.4);
+}
+
+.frm__inp-err {
+    font-size: 10px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.frm__inp-err-ena {
+    display: block;
+}
+
+.frm__val-stt {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.frm__cbx {
+    margin-right: 10px;
+}
+
+.frm__sgn .frm__ttl,
+.frm__sgn .frm__grp-trm,
+.frm__sgn .frm__msg,
+.frm__sgn .frm__grp-btn-snd,
+.frm__ord .frm__msg,
+.frm__ord .frm__grp-btn-snd {
+    grid-column: span 2;
+}
+
+.frm__msg {
+    height: 50px;
+    line-height: 50px;
+    background: #0A0C09;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.frm__msg-ena {
+    display: block;
+}
+
+.frm__msg p {
+    margin: 0;
+}
+
+.frm__btn {
+    height: 40px;
+    width: 100%;
+    background: #74A82A;
+    color: #1F381B;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.frm__btn:hover {
+    background: #1F381B;
+    color: #74A82A;
+}
+
+.frm__msg-scs {
+    font-size: 14px;
+    color: #0A0C09;
+    display: none;
+}
+
+.frm__msg-scs-ena {
+    display: block;
+}
+
+/*#hbd_usr {
+    background: #AA2424;
+    color: #FFF;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}*/
+
+::-webkit-calendar-picker-indicator {
+    background-color: #FFF;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+::-webkit-calendar-picker-indicator:hover {
+    background-color: darkgrey;
+}
+
+/*---- ---- ---- ---- Validación -- ------  ------ --*/
+.frm__grp-oky .frm__val-stt {
+    color: #168816;
+    opacity: 1;
+}
+
+/*.frm__grp-bad .frm__lbl {
+    color: #7E1D1D;  
+}*/
+
+.frm__grp-bad .frm__val-stt {
+    color: #7E1D1D;
+    opacity: 1; 
+}
+
+.frm__grp-bad .frm__inp {
+    border: 3px solid #7E1D1D;
+}
+
+/*----  -- --  ---- Mediaqueries --- -- ------ -- ---*/
+@media only screen and (max-width:768px) {
+    .frm__log,
+    .frm__sgn {
+        width: 100%;
+    }
+
+    .frm__log {
+        margin: 15% 0;
+    }
+
+    .frm__sgn,
+    .frm__ord {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .frm__sgn .frm__ttl,
+    .frm__sgn .frm__grp-trm,
+    .frm__sgn .frm__msg,
+    .frm__sgn .frm__grp-btn-snd,
+    .frm__ord .frm__msg,
+    .frm__ord .frm__grp-btn-snd {
+        grid-column: span 1;
+    }
+}

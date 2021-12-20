@@ -1,0 +1,144 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #1F381B;
+    color: #CDE745;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.cnt__hdr {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    height: 100%;
+}
+
+.cnt__hdr a {
+    color: #CDE745;
+    text-decoration: none;
+}
+
+.lgo__hdr {
+    display: flex;
+    letter-spacing: 10px;
+}
+
+.lgo__hdr p {
+    margin-top: 10px;
+}
+
+.img__lgo {
+    width: 30px;
+    height: 30px;
+    background: #74A82A;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.nav__cnt {
+    display: flex;
+    position: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__cnt ul,
+.nav__cnt .ssn_act {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__cnt ul li,
+.nav__cnt .usr__inf,
+.nav__cnt .usr__prg,
+.nav__cnt .log__out {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.nav__cnt ul li:hover {
+    background: #74A82A;
+    border-radius: 3px;
+}
+
+.usr__inf p {
+    font-size: 8px;
+}
+
+.mnu__btn,
+.out__btn {
+    height: 30px;
+    width: 30px;
+    background: none;
+    color: #417D19;
+    border: 1px #417D80 solid;
+    border-radius: 20%;
+}
+
+.mnu__btn {
+    display: none;
+}
+
+.out__btn {
+    position: relative;
+    top: -10px;
+}
+
+@media screen and (max-width: 768px) {
+    .mnu__btn {
+        position: relative;
+        top: 10px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__cnt {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+    }
+
+    .nav__cnt.ena {
+        transform: translateX(0);
+    }
+
+    .nav__cnt ul,
+    .nav__cnt .ssn__act {
+        flex-direction: column;
+    }
+
+    .nav__cnt ul li,
+    .nav__cnt .usr__inf,
+    .nav__cnt .usr__prg,
+    .nav__cnt .log__out {
+        text-align: center;
+        display: block;
+        background: #0A0C09;
+        margin: 1px;
+        border-radius: 5px;
+    }
+
+    .out__btn {
+        position: inherit;
+    }
+} 

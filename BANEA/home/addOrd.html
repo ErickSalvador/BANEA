@@ -1,0 +1,52 @@
+<head>
+    <link rel="stylesheet" href="../css/sty_log-sgn.css">
+</head>
+<br><br>
+<div class="frm__ord" id="frm_ord">
+    <!--Nombre-->
+    <div class="frm__grp" id="grp_nom">
+        <label for="nom_ord" class="frm__lbl">Nombre de la Orden</label>
+        <div class="frm__grp-inp">
+            <input type="text" class="frm__inp" name="nom_ord" id="nom_ord" placeholder="Ej: Menú del día, Orden de tacos...">
+            <i class="frm__val-stt far fa-times-circle"></i>
+        </div>
+        <p class="frm__inp-err">El nombre debe tener hasta 50 letras.</p>
+    </div>
+    <!--Descripcion-->
+    <div class="frm__grp" id="grp_des">
+        <label for="des_ord" class="frm__lbl">Descripción de la Orden</label>
+        <div class="frm__grp-inp">
+            <input type="text" class="frm__inp" name="des_ord" id="des_ord" placeholder="Ej: Menú del día, Orden de tacos...">
+            <i class="frm__val-stt far fa-times-circle"></i>
+        </div>
+        <p class="frm__inp-err">Solo puede usar letras, números y , . -</p>
+    </div>
+    <!--Precio-->
+    <div class="frm__grp" id="grp_pre">
+        <label for="pre_ord" class="frm__lbl">Precio</label>
+        <div class="frm__grp-inp">
+            <input type="number" step="0.01" class="frm__inp" name="pre_ord" id="pre_ord">
+            <i class="frm__val-stt far fa-times-circle"></i>
+        </div>
+        <p class="frm__inp-err">Solo puede usar números</p>
+    </div>
+    <!--Vigencia-->
+    <div class="frm__grp" id="grp_vig">
+        <label for="vig_ord" class="frm__lbl">Vigencia</label>
+        <div class="frm__grp-inp">
+            <input type="datetime-local" min="" class="frm__inp" name="vig_ord" id="vig_ord">
+            <i class="frm__val-stt far fa-times-circle"></i>
+        </div>
+        <p class="frm__inp-err">La fecha es incompatible.</p>
+    </div>
+    <!--Mensaje-->
+	<div class="frm__msg" id="frm_msg">
+		<p><i class="fas fa-exclamation-circle"></i> <b>Error:</b> Llene todos los campos de forma correcta. </p>
+	</div>
+    <div class="frm__grp frm__grp-btn-snd">
+        <button class="frm__btn" onclick="allRight()">Crear Orden</button>
+        <p class="frm__msg-scs" id="frm_msg-scs">Formulario enviado exitosamente!</p>
+    </div>
+</div>
+
+<script src="../js/spt_val_ord.js"></script>
